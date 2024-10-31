@@ -18,46 +18,43 @@ import produto13 from './../image/funkoPinguimBatman.webp'
 import produto14 from './../image/garrafaHoraDeAventura.webp'
 import produto15 from './../image/garrafaTomJerry.webp'
 
-
 const slides = [produto1, produto2, produto3, produto4, produto5, produto6, produto7, produto8, produto9, produto10, produto11, produto12, produto13, produto14, produto15]
 
 export default function PagPrincipal() {
-
     const [atual, setAtual] = useState(0)
 
     const prev = () => setAtual(atual === 0 ? slides.length - 1 : atual - 1)
     const next = () => setAtual(atual === slides.length - 1 ? 0 : atual + 1)
 
     const produtos = [
-        { imagem: produto1, titulo: 'Batman 89', descricao: 'Camisa do Batman 1989 - DC', width:300, height:200 },
-        { imagem: produto2, titulo: 'DC ORIGINAL', descricao: 'Camisa da DC Comics Original', width:300, height:200  },
-        { imagem: produto3, titulo: 'Grifinoria', descricao: 'Camisa Grifinoria - Harry Potter', width:300, height:200  },
-        { imagem: produto4, titulo: 'Milles Morales', descricao: 'Camisa Homem Aranha Milles Morales Enblema - Marvel ', width:300, height:200  },
-        { imagem: produto5, titulo: 'Madara', descricao: 'Camisa Madara - Naruto', width:300, height:200  },
-        { imagem: produto6, titulo: 'Marvel Vintage', descricao: 'Camisa Marvel Comics Vintage', width:300, height:200  },
-        { imagem: produto7, titulo: 'X-men 97', descricao: 'Camisa X-men 97 - Marvel', width:300, height:200  },
-        { imagem: produto8, titulo: 'Hulk', descricao: 'Chaveiro Cabeça do Hulk - Marvel', width:300, height:200  },
-        { imagem: produto9, titulo: 'Trunks', descricao: 'Chaveiro Trunks - Dragron Ball', width:300, height:200  },
-        { imagem: produto10, titulo: 'Coringa e Batman', descricao: 'Copo do Coringa e Batman DC', width:300, height:200  },
-        { imagem: produto11, titulo: 'Blade', descricao: 'Boneco Funko do Blade - Marvel', width:300, height:200  },
-        { imagem: produto12, titulo: 'Kakashi', descricao: 'Boneco Funko Kakashi - Naruto', width:300, height:200  },
-        { imagem: produto13, titulo: 'Pinguim', descricao: 'Boneco Funko Pinguim - DC', width:300, height:200  },
-        { imagem: produto14, titulo: 'Hora de Aventura', descricao: 'Garrafa - Hora de Aventura', width:300, height:200  },
-        { imagem: produto15, titulo: 'Tom e Jerry', descricao: 'Garrafa - Tom e Jerry', width:300, height:200  }    
+        { imagem: produto1, titulo: 'Batman 89', descricao: 'Camisa do Batman 1989 - DC', width: 300, height: 100 },
+        { imagem: produto2, titulo: 'DC ORIGINAL', descricao: 'Camisa da DC Comics Original', width: 300, height: 100 },
+        { imagem: produto3, titulo: 'Grifinoria', descricao: 'Camisa Grifinoria - Harry Potter', width: 300, height: 100 },
+        { imagem: produto4, titulo: 'Milles Morales', descricao: 'Camisa Homem Aranha Milles Morales Emblema - Marvel', width: 300, height: 100 },
+        { imagem: produto5, titulo: 'Madara', descricao: 'Camisa Madara - Naruto', width: 300, height: 100 },
+        { imagem: produto6, titulo: 'Marvel Vintage', descricao: 'Camisa Marvel Comics Vintage', width: 300, height: 100 },
+        { imagem: produto7, titulo: 'X-men 97', descricao: 'Camisa X-men 97 - Marvel', width: 300, height: 100 },
+        { imagem: produto8, titulo: 'Hulk', descricao: 'Chaveiro Cabeça do Hulk - Marvel', width: 300, height: 100 },
+        { imagem: produto9, titulo: 'Trunks', descricao: 'Chaveiro Trunks - Dragon Ball', width: 300, height: 100 },
+        { imagem: produto10, titulo: 'Coringa e Batman', descricao: 'Copo do Coringa e Batman DC', width: 300, height: 100 },
+        { imagem: produto11, titulo: 'Blade', descricao: 'Boneco Funko do Blade - Marvel', width: 300, height: 100 },
+        { imagem: produto12, titulo: 'Kakashi', descricao: 'Boneco Funko Kakashi - Naruto', width: 300, height: 100 },
+        { imagem: produto13, titulo: 'Pinguim', descricao: 'Boneco Funko Pinguim - DC', width: 300, height: 100 },
+        { imagem: produto14, titulo: 'Hora de Aventura', descricao: 'Garrafa - Hora de Aventura', width: 300, height: 100 },
+        { imagem: produto15, titulo: 'Tom e Jerry', descricao: 'Garrafa - Tom e Jerry', width: 300, height: 100 }
     ];
 
     return (
         <>
             <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center"> Venham conhecer a melhor loja do mundo nerd</h1>
 
-            <div className='max-w-lg mx-auto'>
+            <div className='max-w-xs mx-auto'> {/* Diminuído para 'max-w-xs' */}
                 <div className='overflow-hidden relative'>
-                    {/* Adiciona uma largura fixa e ajusta a transformação */}
                     <div className='flex transition-transform ease-out duration-500' 
                         style={{ transform: `translateX(-${atual * 100}%)`, width: `${slides.length * 100}%` }}>
                         {slides.map((s, i) => (
-                            <div key={i} className='w-full flex-shrink-0'> {/* Cada slide ocupa 100% do contêiner */}
-                                <Image src={s} alt={`Slide ${i}`} width={600} height={400} className='object-cover' />
+                            <div key={i} className='w-full flex-shrink-0'>
+                                <Image src={s} alt={`Slide ${i}`} width={300} height={100} className='object-cover' /> {/* Dimensões ajustadas */}
                             </div>
                         ))}
                     </div>
@@ -74,7 +71,6 @@ export default function PagPrincipal() {
                     </div>
                 </div>
             </div>
-            
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-5xl mx-auto px-4'>
                 {produtos.map((produto, index) => (
@@ -93,13 +89,8 @@ export default function PagPrincipal() {
                     </div>
                 ))}
             </div>
-
         </>
-        
-        
-
-        
-        
-
     )
 }
+
+
