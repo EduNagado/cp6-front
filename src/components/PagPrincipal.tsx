@@ -48,13 +48,13 @@ export default function PagPrincipal() {
         <>
             <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center"> Venham conhecer a melhor loja do mundo nerd</h1>
 
-            <div className='max-w-xs mx-auto'> {/* Diminuído para 'max-w-xs' */}
+            <div className='max-w-xs mx-auto'> 
                 <div className='overflow-hidden relative'>
                     <div className='flex transition-transform ease-out duration-500' 
                         style={{ transform: `translateX(-${atual * 100}%)`, width: `${slides.length * 100}%` }}>
                         {slides.map((s, i) => (
                             <div key={i} className='w-full flex-shrink-0'>
-                                <Image src={s} alt={`Slide ${i}`} width={300} height={100} className='object-cover' /> {/* Dimensões ajustadas */}
+                                <Image src={s} alt={`Slide ${i}`} width={300} height={100} className='object-cover' /> 
                             </div>
                         ))}
                     </div>
