@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "App do Eduardo e Amigos",
-  description: "Eduardo e 4 amigos ",
+  title: "App do Gustavo e Amigos",
+  description: "Gustavo e 4 amigos ",
 };
 
 export default function RootLayout({

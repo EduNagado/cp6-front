@@ -1,9 +1,10 @@
 
 const navigation = [
   { name: 'Home', href: '#' },
-  { name: 'Produtos', href: '#' },
-  { name: 'Cadastro Produto', href: '#' },
+  { name: 'Produtos', href: '/produtos' },
+  { name: 'Cadastro Produto', href: '/produtos/cad-produtos' },
 ]
+
 
 export default function Header() {
 
