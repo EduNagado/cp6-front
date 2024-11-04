@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/header/page";
 
 export const metadata: Metadata = {
-  title: "App do Gustavo e Amigos",
-  description: "Gustavo e 4 amigos ",
+  title: "Geek shop",
+  description: "Melhor loja geek de SP",
 };
 
 export default function RootLayout({
@@ -14,9 +15,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-
+        <Header />
         {children}
-        
       </body>
     </html>
   );

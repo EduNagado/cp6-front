@@ -1,14 +1,11 @@
-
-import Footer from "@/components/footer/page";
-import Header from "@/components/header/page";
 import PagPrincipal from "@/components/PagPrincipal";
+import Footer from "@/components/footer/page";
 
 export default function Home() {
   return (
     <>
-      <Header/>
       <PagPrincipal/>
-      <Footer/>
+      <Footer />
     </>
     
   );
